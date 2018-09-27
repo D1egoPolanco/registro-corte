@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+ErrorDocument 404 /plantilla/error
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#DECLARACION DE URLS AMIGABLES PARA LAS PAGINAS DEL SISTEMA
+
+#EJEMPLOS PARA RESTRICCIONES HTACCESS
+#RewriteRule ^pagina1/([^&]+)$ pagina1.php?cadena=$1 [L]
+#RewriteRule ^pagina2/([a-zA-Z0-9-]*)$ pagina2.php?entero=$1 [L]
+
+#MODULOS POR DEFECTO DEL SISTEMA
+RewriteRule ^ejemplo$ ?mod=ejemplo [L]
+RewriteRule ^inicio$ ?mod=inicio [L]
+RewriteRule ^login$ ?mod=login [L]
+RewriteRule ^error$ ?mod=error [L]
+
+</IfModule>

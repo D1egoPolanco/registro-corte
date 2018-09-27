@@ -1,1 +1,1 @@
-# registro-corte
+plantilla
